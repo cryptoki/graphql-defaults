@@ -20,7 +20,8 @@ class GraphQlConfig {
   ): GraphQL {
     val schema = toSchema(
         config = SchemaGeneratorConfig(
-            supportedPackages = listOf("de.cryptoki.graphqldefaults.api")
+            supportedPackages = listOf("de.cryptoki.graphqldefaults.api"),
+            dataFetcherFactoryProvider = CustomKotlinDataFetcherFactoryProvider()
         ),
         queries = listOf(TopLevelObject(testQuery))
     )

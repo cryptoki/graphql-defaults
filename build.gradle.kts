@@ -12,18 +12,24 @@ version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
+  mavenLocal()
   mavenCentral()
 }
 
 dependencies {
   implementation("org.springframework.boot:spring-boot-starter-actuator")
   implementation("org.springframework.boot:spring-boot-starter-web")
-  implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+  implementation("com.google.code.findbugs:jsr305:3.0.2")
+  implementation("com.fasterxml.jackson.core:jackson-core:2.13.3")
+  implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+  implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+  implementation("org.jetbrains:annotations:23.0.0")
+  implementation("javax.annotation:javax.annotation-api:1.3.2")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 
-  implementation("com.expediagroup:graphql-kotlin-schema-generator:6.1.0")
+  implementation("com.expediagroup:graphql-kotlin-schema-generator:6.0.0-SNAPSHOT")
   implementation("com.graphql-java:graphql-java-extended-scalars:18.1")
 }
 

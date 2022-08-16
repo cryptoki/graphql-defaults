@@ -15,5 +15,5 @@ class TestQuery @Autowired constructor() {
 
   fun print(message: String? = "hello"): String? = message
 
-  fun pojo(pojo: SomeOldPojo): String? = "hello ${pojo.value}"
+  fun pojo(pojo: SomeOldPojo): String? = "hello ${pojo.value} ${pojo.notMandatory ?: "it is null"}"
 }
